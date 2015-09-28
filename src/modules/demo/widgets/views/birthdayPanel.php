@@ -36,7 +36,7 @@ $assets = \humhub\modules\demo\Assets::register($this);
                                 <img class="media-object img-rounded img-demo pull-left"
                                      data-src="holder.js/16x16" alt="16x16"
                                      style="width: 16px; height: 16px;"
-                                     src="<?php echo $assets->baseUrl ?>/cake.png">
+                                     src="<?php echo $assets->baseUrl ?>/favicon.png">
                                  <?php endif; ?>
 
                             <!-- Show content -->

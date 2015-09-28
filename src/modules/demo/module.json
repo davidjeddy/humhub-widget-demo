@@ -1,8 +1,8 @@
 {
     "id"		 : "demo",
-    "name"		 : "demo Widget",
-    "description": "Demo Humhub sidebar widget template.",
-    "keywords"   : ["demo", "widget" "template"],
+    "name"		 : "Humhub Widget Demo",
+    "description": "Demo template of a HumHub widget module.",
+    "keywords"   : ["demo", "widget", "module", "template"],
     "version"    : "0.0.1",
     "humhub"     : {
     	"minVersion": "0.20"
