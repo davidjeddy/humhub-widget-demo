@@ -7,10 +7,10 @@
     ],
     "autoload"   : {
         "psr-4": {
-            "demoAuthor\\" : "src/"
+            "" : "src/modules/demo/"
         }
     },
-    "description": "Humhub Module Demo",
+    "description": "Humhub Module Demo Template",
     "homepage"   : "https://github.com/davidjeddy/humhub-widget-demo/",
     "keywords"   : [
         "widget",
