@@ -19,27 +19,29 @@ class demoSidebarWidget extends \yii\base\Widget
 
     public function run()
     {
-        $range = (int) Setting::Get('shownDays', 'demo');
-
-        $demoCondition = "DATE_ADD(profile.demo, 
-                INTERVAL YEAR(CURDATE())-YEAR(profile.demo)
-                         + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.demo),1,0)
+        $demoCondition = "
+            DATE_ADD(
+                profile.demo, 
+                INTERVAL YEAR(CURDATE()) - YEAR(profile.demo) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.demo),1,0)
                 YEAR)  
-            BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY);";
+            BETWEEN CURDATE() AND DATE_ADD(
+                CURDATE(),
+                INTERVAL " . ((int)Setting::Get('shownDays', 'demo')) . " DAY
+            );";
 
         $users = User::find()
-                ->joinWith('profile')
-                ->where($demoCondition)
-                ->limit(10)
-                ->all();
+            ->joinWith('profile')
+            ->where($demoCondition)
+            ->limit(10)
+            ->all();
 
-        if (count($users) == 0) {
-            return;
-        }
-
-        return $this->render('demoPanel', [
-            'users' => $users
-        ]);
+        return (
+            count($users) == 0
+            ? null
+            : $this->render('demoPanel', [
+                'users' => $users
+            ])
+        );
     }
 
     public function getDays($user)

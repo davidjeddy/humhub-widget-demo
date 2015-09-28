@@ -13,6 +13,15 @@ use yii\helpers\Html;
 $assets = \humhub\modules\demo\Assets::register($this);
 ?>
 
+<style type="text/css">
+    .img-demo {
+        left:       30px;
+        position:   absolute;
+        top:        32px;
+    }
+</style>
+
+
 <div class="panel panel-default panel-demo">
     <div class="panel-heading">
         <strong><?php echo Yii::t('demoModule.base', 'Upcoming'); ?></strong> <?php echo Yii::t('demoModule.base', 'demos'); ?>
@@ -20,10 +29,8 @@ $assets = \humhub\modules\demo\Assets::register($this);
     <div id="demoContent">
         <ul id="demoList" class="media-list">
 
-            <?php foreach ($users as $user): ?>
-                <?php
-                $remainingDays = $this->context->getDays($user);
-                ?>
+            <?php foreach ($users as $user) { ?>
+                <?php $remainingDays = $this->context->getDays($user); ?>
                 <li class="demoEntry">
                     <a href="<?php echo $user->getUrl(); ?>">
                         <div class="media">
@@ -61,16 +68,8 @@ $assets = \humhub\modules\demo\Assets::register($this);
                     </a>
                 </li>
 
-            <?php endforeach; ?>
+            <?php }; ?>
         </ul>
 
     </div>
 </div>
-
-<style type="text/css">
-    .img-demo {
-        position: absolute;
-        top: 32px;
-        left: 30px;
-    }
-</style>
