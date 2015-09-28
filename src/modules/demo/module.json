@@ -1,0 +1,15 @@
+{
+    "id"		 : "demo",
+    "name"		 : "demo Widget",
+    "description": "Demo Humhub sidebar widget template.",
+    "keywords"   : ["demo", "widget" "template"],
+    "version"    : "0.0.1",
+    "humhub"     : {
+    	"minVersion": "0.20"
+    },
+    "screenshots": [
+    	"assets/screen0.png",
+    	"assets/screen1.png",
+    	"assets/screen2.png",
+    ]
+}

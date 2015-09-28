@@ -1,0 +1,1 @@
+demo -> ../vendor/davidjeddy/humhub-widget-demo/src/modules/demo

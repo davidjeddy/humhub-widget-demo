@@ -1,0 +1,37 @@
+{
+    "authors"    : [
+        {
+            "name": "David J Eddy",
+            "email": "me@davidjeddy.com"
+        }
+    ],
+    "autoload"   : {
+        "psr-4": {
+            "demoAuthor\\" : "src/"
+        }
+    },
+    "description": "Humhub Module Demo",
+    "homepage"   : "https://github.com/davidjeddy/humhub-widget-demo/",
+    "keywords"   : [
+        "widget",
+        "humhub",
+        "yii2"
+    ],
+    "license"    : "MIT",
+    "name"       : "davidjeddy/humhub-widget-demo",
+    "support"    : {
+        "website": "https://github.com/davidjeddy/humhub-widget-demo"
+    },
+    "type"       : "widget",
+    "require"    : {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug"      : "*",
+        "yiisoft/yii2-gii"        : "*",
+        "yiisoft/yii2-faker"      : "*",
+        "yiisoft/yii2-apidoc"     : "^2.0"
+    },
+    "version"    : "0.0.1",
+}
