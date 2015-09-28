@@ -19,16 +19,16 @@ class ConfigController extends \humhub\modules\admin\components\Controller
      */
     public function actionIndex()
     {
-        $form = new \humhub\modules\demo\models\demoConfigureForm();
+        $form            = new \humhub\modules\demo\models\DemoConfigureForm();
         $form->shownDays = Setting::Get('shownDays', 'demo');
+
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             $form->shownDays = Setting::Set('shownDays', $form->shownDays, 'demo');
             return $this->redirect(['/demo/config']);
         }
 
-        return $this->render('index', array('model' => $form));
+        return $this->render('index', [
+            'model' => $form
+        ]);
     }
-
-}
-
-?>
+};

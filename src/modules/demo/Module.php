@@ -26,7 +26,7 @@ class Module extends \humhub\components\Module
             return;
         }
 
-        $event->sender->addWidget(demoSidebarWidget::className(), array(), array('sortOrder' => 200));
+        $event->sender->addWidget(demoSidebarWidget::className(), [], ['sortOrder' => 200]);
     }
 
     /**

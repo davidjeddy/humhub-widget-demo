@@ -17,14 +17,17 @@ use humhub\compat\CActiveForm;
         <?php echo $form->errorSummary($model); ?>
 
         <div class="form-group">
-            <?php echo $form->labelEx($model, 'shownDays'); ?>
-            <?php echo $form->textField($model, 'shownDays', array('class' => 'form-control')); ?>
-            <?php echo $form->error($model, 'shownDays'); ?>
+            <?php echo $form->labelEx($model,   'shownDays'); ?>
+            <?php echo $form->textField($model, 'shownDays', ['class' => 'form-control']); ?>
+            <?php echo $form->error($model,     'shownDays'); ?>
         </div>
 
         <hr>
-        <?php echo Html::submitButton(Yii::t('demoModule.base', 'Save'), array('class' => 'btn btn-primary')); ?>
-        <a class="btn btn-default" href="<?php echo Url::to(['/admin/module']); ?>"><?php echo Yii::t('demoModule.base', 'Back to modules'); ?></a>
+
+        <?php echo Html::submitButton(Yii::t('demoModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
+        <a class="btn btn-default" href="<?php echo Url::to(['/admin/module']); ?>">
+            <?php echo Yii::t('demoModule.base', 'Back to modules'); ?>
+        </a>
 
         <?php CActiveForm::end(); ?>
     </div>

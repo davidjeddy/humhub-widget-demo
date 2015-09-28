@@ -37,9 +37,9 @@ class demoSidebarWidget extends \yii\base\Widget
             return;
         }
 
-        return $this->render('demoPanel', array(
-                    'users' => $users
-        ));
+        return $this->render('demoPanel', [
+            'users' => $users
+        ]);
     }
 
     public function getDays($user)
@@ -71,6 +71,4 @@ class demoSidebarWidget extends \yii\base\Widget
         return $age;
     }
 
-}
-
-?>
+};
