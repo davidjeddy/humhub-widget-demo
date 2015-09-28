@@ -12,6 +12,7 @@ return [
         	],
         	'event' => Sidebar::EVENT_INIT,
     	],
+    ],
 	'id'        => 'demo',
-	'namespace' => 'humhub\modules\demo',
+	'namespace' => 'humhub\modules\demo'
 ];
