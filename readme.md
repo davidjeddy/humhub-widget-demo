@@ -1,12 +1,14 @@
 readme
 ======
 
-Humhub widget demo
+Humhub widget demo template
 
 install
 =======
 
-./docs/install.md
+Due to the way Humhub is built and the way composer works symlinks need to be created manually
+ * `cd ./protected/modules`
+ * `ln -sfn demo ../vendor/davidjeddy/humhub-widget-demo/src/modules/demo
 
 license
 =======
