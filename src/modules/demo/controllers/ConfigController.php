@@ -9,7 +9,7 @@ use humhub\models\Setting;
  * Defines the configure actions.
  *
  * @package humhub.modules.demo.controllers
- * @author Sebastian Stumpf
+ * @author Sebastian Stumpf, David J Eddy
  */
 class ConfigController extends \humhub\modules\admin\components\Controller
 {

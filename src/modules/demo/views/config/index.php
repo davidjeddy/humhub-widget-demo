@@ -5,11 +5,11 @@ use yii\helpers\Url;
 use humhub\compat\CActiveForm;
 ?>
 <div class="panel panel-default">
-    <div class="panel-heading"><?php echo Yii::t('demoModule.base', 'demo Module Configuration'); ?></div>
+    <div class="panel-heading"><?php echo Yii::t('DemoModule.base', 'demo Module Configuration'); ?></div>
     <div class="panel-body">
 
 
-        <p><?php echo Yii::t('demoModule.base', 'You may configure the number of days within the upcoming demos are shown.'); ?></p>
+        <p><?php echo Yii::t('DemoModule.base', 'You may configure the number of days within the upcoming demos are shown.'); ?></p>
         <br/>
 
         <?php $form = CActiveForm::begin(); ?>
@@ -24,9 +24,9 @@ use humhub\compat\CActiveForm;
 
         <hr>
 
-        <?php echo Html::submitButton(Yii::t('demoModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
+        <?php echo Html::submitButton(Yii::t('DemoModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
         <a class="btn btn-default" href="<?php echo Url::to(['/admin/module']); ?>">
-            <?php echo Yii::t('demoModule.base', 'Back to modules'); ?>
+            <?php echo Yii::t('DemoModule.base', 'Back to modules'); ?>
         </a>
 
         <?php CActiveForm::end(); ?>

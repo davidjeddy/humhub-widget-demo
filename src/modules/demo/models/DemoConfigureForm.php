@@ -8,7 +8,7 @@ use Yii;
  * DemoConfigureForm defines the configurable fields.
  *
  * @package humhub.modules.demo.forms
- * @author Sebastian Stumpf
+ * @author Sebastian Stumpf, David J Eddy
  */
 class DemoConfigureForm extends \yii\base\Model
 {
@@ -21,7 +21,7 @@ class DemoConfigureForm extends \yii\base\Model
     public function rules()
     {
         return [
-            ['shownDays', 'required'],
+            ['shownDays',   'required'],
             [['shownDays'], 'integer'],
         ];
     }
@@ -32,8 +32,8 @@ class DemoConfigureForm extends \yii\base\Model
      */
     public function attributeLabels()
     {
-        return []
-            'shownDays' => Yii::t('demoModule.base', 'The number of days future demos messages will be shown.'),
+        return [
+            'shownDays' => Yii::t('DemoModule.base', 'The number of days future demos messages will be shown.'),
         ];
     }
 

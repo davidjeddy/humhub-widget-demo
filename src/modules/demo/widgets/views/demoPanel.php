@@ -8,7 +8,7 @@ use yii\helpers\Html;
  * @uses User $users the profile data of all the users that have demo the next days.
  *
  * @package humhub.modules.demo.widgets.views
- * @author Sebastian Stumpf
+ * @author Sebastian Stumpf, David J Eddy
  */
 $assets = \humhub\modules\demo\Assets::register($this);
 ?>
@@ -24,7 +24,7 @@ $assets = \humhub\modules\demo\Assets::register($this);
 
 <div class="panel panel-default panel-demo">
     <div class="panel-heading">
-        <strong><?php echo Yii::t('demoModule.base', 'Upcoming'); ?></strong> <?php echo Yii::t('demoModule.base', 'demos'); ?>
+        <strong><?php echo Yii::t('DemoModule.base', 'Upcoming'); ?></strong> <?php echo Yii::t('DemoModule.base', 'demos'); ?>
     </div>
     <div id="demoContent">
         <ul id="demoList" class="media-list">
@@ -52,15 +52,15 @@ $assets = \humhub\modules\demo\Assets::register($this);
                                 <?php
                                 // show when the user has his demo
                                 if ($remainingDays == 0) {
-                                    echo ' <span class="label label-danger">' . Yii::t('demoModule.base', 'today') . '</span>';
+                                    echo ' <span class="label label-danger">' . Yii::t('DemoModule.base', 'today') . '</span>';
                                 } else if ($remainingDays == 1) {
-                                    echo ' (' . Yii::t('demoModule.base', 'Tomorrow') . ')';
+                                    echo ' (' . Yii::t('DemoModule.base', 'Tomorrow') . ')';
                                 } else {
-                                    echo ' (' . Yii::t('demoModule.base', 'in') . ' ' . $remainingDays . ' ' . Yii::t('demoModule.base', 'days') . ')';
+                                    echo ' (' . Yii::t('DemoModule.base', 'in') . ' ' . $remainingDays . ' ' . Yii::t('DemoModule.base', 'days') . ')';
                                 }
                                 // show the users age if allowed
                                 if ($user->profile->demo_hide_year == '0') {
-                                    echo '<br />' . Yii::t('demoModule.base', 'becomes') . ' ' . $this->context->getAge($user) . ' ' . Yii::t('demoModule.base', 'years old.');
+                                    echo '<br />' . Yii::t('DemoModule.base', 'becomes') . ' ' . $this->context->getAge($user) . ' ' . Yii::t('DemoModule.base', 'years old.');
                                 }
                                 ?>
                             </div>

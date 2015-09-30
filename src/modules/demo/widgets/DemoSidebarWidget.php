@@ -12,7 +12,7 @@ use humhub\models\Setting;
  * It is attached to the dashboard sidebar.
  *
  * @package humhub.modules.demo.widgets
- * @author Sebastian Stumpf
+ * @author Sebastian Stumpf, David J Eddy
  */
 class demoSidebarWidget extends \yii\base\Widget
 {
@@ -21,8 +21,8 @@ class demoSidebarWidget extends \yii\base\Widget
     {
         $demoCondition = "
             DATE_ADD(
-                profile.demo, 
-                INTERVAL YEAR(CURDATE()) - YEAR(profile.demo) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.demo),1,0)
+                profile.birthday, 
+                INTERVAL YEAR(CURDATE()) - YEAR(profile.birthday) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.birthday),1,0)
                 YEAR)  
             BETWEEN CURDATE() AND DATE_ADD(
                 CURDATE(),

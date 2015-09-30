@@ -10,7 +10,7 @@ use yii\helpers\Url;
 /**
  * demoModule is responsible for the the demo functions.
  * 
- * @author Sebastian Stumpf
+ * @author Sebastian Stumpf, David J Eddy
  */
 class Module extends \humhub\components\Module
 {
@@ -26,7 +26,11 @@ class Module extends \humhub\components\Module
             return;
         }
 
-        $event->sender->addWidget(demoSidebarWidget::className(), [], ['sortOrder' => 200]);
+        $event->sender->addWidget(
+            demoSidebarWidget::className(),
+            [],
+            ['sortOrder' => 200]
+        );
     }
 
     /**
