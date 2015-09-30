@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\demo\widgets;
+namespace davdjeddy\demo\Module\widgets;
 
 use Yii;
 use humhub\modules\user\models\User;
@@ -48,7 +48,7 @@ class demoSidebarWidget extends \yii\base\Widget
     {
         $now = new \DateTime('now');
         $now->setTime(00, 00, 00);
-        $nextdemo = new \DateTime(date('y') . '-' . Yii::$app->formatter->asDate($user->profile->demo, 'php:m-d'));
+        $nextdemo = new \DateTime(date('y') . '-' . Yii::$app->formatter->asDate($user->profile->birthday, 'php:m-d'));
 
         $days = $nextdemo->diff($now)->d;
 
@@ -63,7 +63,7 @@ class demoSidebarWidget extends \yii\base\Widget
 
     public function getAge($user)
     {
-        $demo = new \DateTime($user->profile->demo);
+        $demo = new \DateTime($user->profile->birthday);
         $age = $demo->diff(new \DateTime('now'))->y;
 
         if ($this->getDays($user) != 0) {

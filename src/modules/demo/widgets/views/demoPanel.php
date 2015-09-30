@@ -10,7 +10,7 @@ use yii\helpers\Html;
  * @package humhub.modules.demo.widgets.views
  * @author Sebastian Stumpf, David J Eddy
  */
-$assets = \humhub\modules\demo\Assets::register($this);
+$assets = \davdjeddy\demo\Module\Assets::register($this);
 ?>
 
 <style type="text/css">
@@ -59,7 +59,7 @@ $assets = \humhub\modules\demo\Assets::register($this);
                                     echo ' (' . Yii::t('DemoModule.base', 'in') . ' ' . $remainingDays . ' ' . Yii::t('DemoModule.base', 'days') . ')';
                                 }
                                 // show the users age if allowed
-                                if ($user->profile->demo_hide_year == '0') {
+                                if ($user->profile->birthday_hide_year == '0') {
                                     echo '<br />' . Yii::t('DemoModule.base', 'becomes') . ' ' . $this->context->getAge($user) . ' ' . Yii::t('DemoModule.base', 'years old.');
                                 }
                                 ?>

@@ -2,18 +2,19 @@
 
 use humhub\modules\dashboard\widgets\Sidebar;
 
+
 return [
-    'class' => 'humhub\modules\demo\Module',
+    'class' => 'davdjeddy\demo\Module\Module',
     'events' => [ 
         // ref: https://www.humhub.org/docs/guide-dev-module-events.html
         [
             'class'    => Sidebar::className(),
             'callback' => [
-                'humhub\modules\demo\Module', 'onSidebarInit'
+                'davdjeddy\demo\Module\Module', 'onSidebarInit'
             ],
             'event' => Sidebar::EVENT_INIT,
         ],
     ],
     'id'        => 'demo',
-    'namespace' => 'humhub\modules\demo'
+    'namespace' => 'davdjeddy\demo\Module'
 ];

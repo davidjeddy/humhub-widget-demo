@@ -1,9 +1,9 @@
 <?php
 
-namespace humhub\modules\demo;
+namespace davdjeddy\demo\Module;
 
 use Yii;
-use humhub\modules\demo\widgets\demoSidebarWidget;
+use davdjeddy\demo\Module\widgets\demoSidebarWidget;
 use humhub\models\Setting;
 use yii\helpers\Url;
 
@@ -26,7 +26,7 @@ class Module extends \humhub\components\Module
             return;
         }
 
-        $event->sender->addWidget(
+        return $event->sender->addWidget(
             demoSidebarWidget::className(),
             [],
             ['sortOrder' => 200]
@@ -38,7 +38,7 @@ class Module extends \humhub\components\Module
      */
     public function getConfigUrl()
     {
-        return Url::to(['/demo/config']);
+        return Url::to(['./demo/config']);
     }
 
     /**

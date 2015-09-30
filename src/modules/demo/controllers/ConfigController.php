@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\demo\controllers;
+namespace davdjeddy\demo\Module\controllers;
 
 use Yii;
 use humhub\models\Setting;
@@ -19,7 +19,7 @@ class ConfigController extends \humhub\modules\admin\components\Controller
      */
     public function actionIndex()
     {
-        $form            = new \humhub\modules\demo\models\DemoConfigureForm();
+        $form            = new \davdjeddy\demo\Module\models\DemoConfigureForm();
         $form->shownDays = Setting::Get('shownDays', 'demo');
 
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {

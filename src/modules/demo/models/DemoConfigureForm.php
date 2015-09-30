@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\demo\models;
+namespace davdjeddy\demo\Module\models;
 
 use Yii;
 

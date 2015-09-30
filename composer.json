@@ -7,7 +7,7 @@
     ],
     "autoload"   : {
         "psr-4": {
-            "" : "src/modules/demo/"
+            "" : "src/modules/"
         }
     },
     "description": "Humhub Module Demo Template",

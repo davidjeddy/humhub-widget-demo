@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\demo;
+namespace davdjeddy\demo\Module;
 
 use yii\web\AssetBundle;
 
